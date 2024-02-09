@@ -1,5 +1,6 @@
 package com.choi.part3_ch08.presenter.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
@@ -27,13 +28,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // 새로 작성
     fun onClickAdd() {
-
+        InputActivity.start(this)
     }
 
+    // 기존 데이터 수정
     inner class Handler {
         fun onClickItem(item: Content) {
-
+            InputActivity.start(this@MainActivity,item)
         }
 
         fun onLongClickItem(item: Content): Boolean {
