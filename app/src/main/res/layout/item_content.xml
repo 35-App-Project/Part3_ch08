@@ -17,8 +17,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="@{()->handler.onClickItem()}"
-        android:onLongClick="@{()->handler.onLongClickItem()}">
+        android:onClick="@{()->handler.onClickItem(item)}"
+        android:onLongClick="@{()->handler.onLongClickItem(item)}">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/titleTextView"
